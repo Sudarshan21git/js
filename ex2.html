@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = Number.parseInt(window.prompt("Enter the first number: "));
+        let b = Number.parseInt(window.prompt("Enter the second number: "));
+        let c = window.prompt("Enter an operator (+, -, *, /):");
+        let z;
+
+        switch (c) {
+            case "+":
+                z = a + b;
+                break;
+            case "-":
+                z = a - b;
+                break;
+            case "*":
+                z = a * b;
+                break;
+            case "/":
+                z = a / b;
+                break;
+        }
+
+        if (z % 2 === 0) {
+            window.alert("Even");
+        } else {
+            window.alert("Odd");
+        }
+    </script>
+</body>
+</html>
