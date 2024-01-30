@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+     document.write("Q5g sudarshan sharma rollno:49 sec:B<br>");
+
+      // Function with rest parameters
+      function displayArguments(...args) {
+        for (var i = 0; i < args.length; i++) {
+         document.write("Argument " + (i + 1) + ": " + args[i]);
+        }
+      }
+
+      // Calling the function with different arguments
+      displayArguments("Apple", "Banana", "Mango", "Cherry");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sudarshan</title>
+</head>
+<body>
+    <script>
+        // Sample array
+        let numbers = ["one", "two", "three", "four", "five"];
+
+        document.write("Q4f, Name: sudarshan sharma, Roll: 49 <br>");
+        // includes()
+        document.write("includes(): " + numbers.includes("three") + "<br>"); // true
+
+        // find()
+        const foundItem = numbers.find(item => item.length > 4);
+        document.write("find(): " + foundItem + "<br>"); // "three"
+
+        // findIndex()
+        const foundIndex = numbers.findIndex(item => item === "three");
+        document.write("findIndex(): " + foundIndex + "<br>"); // 2
+
+        // indexOf()
+        document.write("indexOf(): " + numbers.indexOf("three") + "<br>"); // 2
+
+        // lastIndexOf()
+        document.write("lastIndexOf(): " + numbers.lastIndexOf("three") + "<br>"); // 2
+
+        // join()
+        const joined = numbers.join(", ");
+        document.write("join(): " + joined + "<br>");
+
+        // concat()
+        const moreNumbers = ["six", "seven"];
+        const combined = numbers.concat(moreNumbers);
+        document.write("concat(): " + combined + "<br>");
+
+        // pop()
+        const poppedItem = numbers.pop();
+        document.write("pop(): " + poppedItem + ", " + numbers + "<br>");
+
+        // push()
+        numbers.push("eight");
+        document.write("push(): " + numbers + "<br>");
+
+        // reverse()
+        const reversedNumbers = numbers.slice().reverse(); // create a copy to avoid modifying the original array
+        document.write("reverse(): " + reversedNumbers + "<br>");
+
+        // shift()
+        const shiftedItem = numbers.shift();
+        document.write("shift(): " + shiftedItem + ", " + numbers + "<br>");
+
+        // unshift()
+        numbers.unshift("zero");
+        document.write("unshift(): " + numbers + "<br>");
+
+        // slice()
+        const slicedNumbers = numbers.slice(1, 3);
+        document.write("slice(): " + slicedNumbers + "<br>");
+
+        // map()
+        const mappedNumbers = numbers.map(item => item.toUpperCase());
+        document.write("map(): " + mappedNumbers + "<br>");
+
+        // sort()
+        const sortedNumbers = numbers.slice().sort(); // create a copy to avoid modifying the original array
+        document.write("sort(): " + sortedNumbers + "<br>");
+
+        // every()
+        const allItemsHaveLength = numbers.every(item => item.length > 3);
+        document.write("every(): " + allItemsHaveLength + "<br>");
+    </script>
+</body>
+</html>

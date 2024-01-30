@@ -1,0 +1,23 @@
+<!-- Create a web page to take a number from prompt dialog and display the sum of digits 
+of that number in an alert box using while-loop. (if number is 1457 the result should 
+be (1+4+5+7 ) = 12). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sudarshan</title>
+</head>
+<body>
+    <script>
+let n = window.prompt("Enter the numbers:");
+      let intN = parseInt(n);
+      var sum = 0;
+      while (intN !== 0) {
+        sum += intN % 10;
+        intN = Math.floor(intN / 10);
+      }
+      window.alert("The sum of the digits is: " + sum);
+    </script>
+</body>
+</html>

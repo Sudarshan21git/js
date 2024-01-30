@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sudarshan</title>
+  </head>
+  <body>
+    <script>
+     document.write("Q5c, Name: sudarshan sharma, Roll:49 <br>");
+
+      // Function Invocation
+      function greet(name) {
+        document.write("Hello, " + name + "!");
+      }
+      greet("Sudarshan");
+
+      // Method Invocation
+      var person = {
+        name: "Sujan",
+        greetMethod: function () {
+          document.write("<br>Greetings, " + this.name + "!");
+        },
+      };
+      person.greetMethod();
+
+      // Constructor Invocation
+      function Person(name) {
+        this.name = name;
+      }
+      var person = new Person("User Sudarshan sharma");
+      document.write("<br>Constructor Invocation:", person.name);
+
+      // Indirect Invocation using call() method
+      function introduce(city) {
+        document.write("<br>I am " + this.name + " from " + city + ".");
+      }
+      var name = { name: "Sudarshan" };
+      introduce.call(person, "Kathmandu");
+
+      // Indirect Invocation using apply() method
+      function displaySkills(skill1, skill2) {
+        document.write(
+          "<br>"+this.name + " is skilled in " + skill1 + " and " + skill2 + "."
+        );
+      }
+      var developer = { name: "Ram" };
+      var skills = ["JavaScript", "PhP"];
+      displaySkills.apply(developer, skills);
+
+      // Implicit Function Invocation
+      var calculator = {
+        value: 0,
+        add: function (x) {
+          this.value += x;
+          return this;
+        },
+        multiply: function (x) {
+          this.value *= x;
+          return this;
+        },
+      };
+      var result = calculator.add(5).multiply(2).value;
+      document.write("<br>Implicit Function Invocation::::::", result);
+    </script>
+  </body>
+</html>
+ 

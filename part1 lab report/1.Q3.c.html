@@ -1,0 +1,25 @@
+<!-- Use prompt dialogs to take numbers and a confirm dialogs to ask whether to take 
+another number or not. Write a script that takes numbers from user until user want to 
+enter another number and display the sum of the all entered numbers using do-while -
+loop. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sudarshan </title>
+</head>
+<body>
+    <p>sudarshan</p>
+    <script>
+         var sum=0;
+        do{
+            var n = window.prompt("Enter the nubmer:");
+            sum += parseInt(n);
+            var ask=window.confirm("Do you want to enter another number?");
+        }while(ask==true){
+            window.alert("The total sum of the numbers is:"+sum)
+        }
+    </script>
+</body>
+</html>
