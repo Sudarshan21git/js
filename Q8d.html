@@ -1,0 +1,48 @@
+<!-- d. Create a web page that takes date of birth as input and display the age 
+ In years 
+ In years, months and days -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    console.log("Q8d, Name:sudarshan sharma, Roll No./Section: 49 B");
+        //to calculate age in _years_months_days form
+        let dob = prompt("Enter dob in  yyyy-mm-dd format");
+        let d = new Date(dob);
+        let today = new Date();
+        let dobYear = d.getFullYear();
+        let dobMonth = d.getMonth();
+        let dobDay = d.getDate();
+        let todayYear = today.getFullYear();
+        let todayMonth = today.getMonth();
+        let todayDay = today.getDate();
+        let ageInYear = todayYear - dobYear;
+        let ageInMonth = todayMonth - dobMonth;
+        let ageInDay = todayDay - dobDay;
+        if (ageInMonth < 0) {
+            ageInYear--;
+            ageInMonth = ageInMonth + 12;
+        }
+        if (ageInDay < 0) {
+            ageInMonth--;
+            //ageInDay  = ageInDay+31;
+            /*NOTE: adding 31 may not always result correct days
+            instead number of days in current month can be added
+            when you set the day to 0, JS automatically goes back 
+            one day from the 1st day of the specified month, 
+            resulting in the last day of the previous month*/
+            let nextMonthDate = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+            // Get the day of the month (which is the last day)
+            let numberOfDaysInMonth = nextMonthDate.getDate();
+            ageInDay = ageInDay + numberOfDaysInMonth;
+        }
+        alert(ageInYear + "  years" + ageInMonth + "Months" + ageInDay + "Days");
+    </script>
+</body>
+</html>
+

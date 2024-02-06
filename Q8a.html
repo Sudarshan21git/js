@@ -1,0 +1,30 @@
+<!-- 8. Working with Date object.
+a. Write a program to demonstrate different ways to create date object in JS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     document.write("Q8a, Name: Sudarshan sharma, Roll: 49 <br>");
+        const d1= new Date();
+        document.write("Way 1: "+d1);
+
+        const d2= new Date("2099-12-30");
+        document.write("<br>way 2: "+d2);
+
+        const d3= new Date(2024, 11, 30,1, 1, 2);
+        document.write("<br>way 3: "+d3);
+
+        const d4= new Date("jan 1, 2099 1:00:00");
+        document.write("<br>way 4: "+d4);
+
+        const d5= new Date(10000000000);
+        document.write("<br>way 5: "+d5);
+
+    </script>
+</body>
+</html>

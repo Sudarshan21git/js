@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        #result {
+            font-size: 1.5em;
+            color: #333;
+            margin-top: 20px;
+        }
+    }
+    </style>
+</head>
+<body>
+    
+    <label for="inputDate">Enter a date:</label>
+    <input type="date" id="inputDate">
+
+    <button onclick="calculateDate()">Calculate</button>
+
+    <div id="result"></div>
+
+    <script>
+        document.write("Lab:8_f, Name:Roshan Jhendi, Roll No.:37");
+        function calculateDate() {
+            var inputDate = new Date(document.getElementById("inputDate").value);
+
+            // Calculate the new date
+            var resultDate = new Date(inputDate);
+            resultDate.setDate(resultDate.getDate() - 1);
+
+            // Display the result
+            var resultString = "Date Before : " + resultDate.toDateString();
+            document.getElementById("result").innerText = resultString;
+        }
+    </script>
+
+</body>
+</html>

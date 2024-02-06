@@ -1,0 +1,50 @@
+<!-- b. Write a program to show the use of following getter methods of date object in JS
+getDate()
+getDay()
+getFullYear()
+getHours()
+getMonth()
+getMilliSeconds()
+getSeconds()
+getMinutes()
+getTimeZoneOffset()
+getYear()
+getUTCFullYear()
+getUTCDay()
+getUTCDate() 
+getUTCMonth() -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("Q8b, Name: Sudarshan sharma, Roll: 49 <br>");
+        let dateElement = document.getElementById("date");
+        let timeElement = document.getElementById("time");
+
+        let d = new Date();
+        let todaysDate = d.getDate();
+        let day = d.getDay();
+        let year = d.getFullYear();
+        let hours = d.getHours();
+        let m = d.getMonth();
+        let ms = d.getMilliseconds();
+        let s = d.getSeconds();
+        let min = d.getMinutes();
+        let t = d.getTimezoneOffset();
+        let y = d.getYear();
+        let utcd = d.getUTCDate();
+        let utcday = d.getUTCDay();
+        let utcdate = d.getUTCDate();
+        let utcm = d.getUTCMonth();
+
+        // Update the content of the div elements
+        document.write("Date:"+todaysDate+" Day:"+day+" FullYear:"+year+" year:"+y+" Month:"+m+" hour:"+hours+" minute:"+min+" sec:"+s+" millisecond:"+ms+" timezone:"+t+" utcDate:"+utcd+" utcDay:"+utcday+" utcDate:"+utcdate+" utcMonth:"+utcm);
+    </script>
+</body>
+</html>

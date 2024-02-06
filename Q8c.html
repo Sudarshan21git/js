@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+  document.write("Q8c, Name: Sudarshan sharma, Roll: 49 <br>");
+
+  // Creating a new Date object
+  let currentDate = new Date();
+
+  currentDate.setDate(15);
+  let mDate = currentDate.getDate();
+
+  currentDate.setFullYear(2023);
+  let mfullyear = currentDate.getFullYear();
+
+  currentDate.setHours(12);
+  let mhour = currentDate.getHours();
+
+  currentDate.setMonth(6);
+  let mmonth = currentDate.getMonth();
+
+  currentDate.setMilliseconds(500);
+  let mms = currentDate.getMilliseconds();
+
+  currentDate.setSeconds(30);
+  let ms = currentDate.getSeconds();
+
+  currentDate.setMinutes(45);
+  let mm = currentDate.getMinutes();
+
+  // Deprecated method; use setFullYear() instead.
+  currentDate.setYear(2024);
+  let myear = currentDate.getYear();
+
+  currentDate.setUTCFullYear(2025);
+  let mutcfy = currentDate.getUTCFullYear();
+
+  currentDate.setUTCDate(10);
+  let mutcd = currentDate.getUTCDate();
+
+  currentDate.setUTCMonth(11);
+  let mutcm = currentDate.getUTCMonth();
+
+  // Displaying the modified values
+  document.write("Modified Date: " + mDate + " "+"Modified Full Year: " + mfullyear + " "+"Modified Hours: " + mhour + " "+"Modified Month: " + mmonth + " "+"Modified Milliseconds: " + mms + " "+"Modified Seconds: " + ms + " "+"Modified Minutes: " + mm + " "+"Modified Year: " + myear + "<br>"+"Modified UTC Full Year: " + mutcfy + " "+"Modified UTC Date: " + mutcd + " "+"Modified UTC Month: " + mutcm);
+</script>
+
+</body>
+</html>

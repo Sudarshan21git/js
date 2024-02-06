@@ -1,0 +1,60 @@
+<!-- . Create a web page having a digital clock blinking each second and displaying correct
+time. The page also should display the current date.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #clock {
+            font-size: 2em;
+            font-weight: bold;
+            color: black;
+        }
+
+        #date {
+            font-size: 1.5em;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="clock"></div>
+    <div id="date"></div>
+
+    <script>
+        document.write("Q8e, Name:Sudarshan sharma, Roll No:49");
+        function clock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            // Add leading zeros to single-digit hours, minutes, and seconds
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            var timeString = hours + ":" + minutes + ":" + seconds;
+            var dateString = now.toDateString();
+
+            document.getElementById("clock").innerText = timeString;
+            document.getElementById("date").innerText = dateString;
+        }
+
+        // Initial call to display the clock immediately
+        clock();
+        // Update the clock every second
+        setInterval(clock, 1000);
+
+
+    </script>
+
+</body>
+
+</html>
