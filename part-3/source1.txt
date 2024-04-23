@@ -1,0 +1,1 @@
+<h4>Lab:22b, Name:Sudarshan sharma, Roll/Section:49'B'</h4>Written using fwrite and read using fread!!!

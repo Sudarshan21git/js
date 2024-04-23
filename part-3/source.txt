@@ -1,0 +1,1 @@
+<h4>Lab:22Hellome:Sudarshan sharma, Roll/Section:49'B'</h4>Written using fputs and read using fgets!!!
