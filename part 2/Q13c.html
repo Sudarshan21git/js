@@ -1,0 +1,49 @@
+<!-- c) Create a web page and write Script using JS for demonstrating 
+ Node creation
+ Node insertion ( using appenChild() and insertBefore())
+ Node replacement (using replaceChild())
+ Node Removal (using removeChild()) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Manipulation</title>
+</head>
+<body>
+    
+    <div id="d">
+        <p>Q13C NAME:sudarshan sharma rollno:49</p>
+        <p id="pp">Original Paragraph</p>
+    </div>
+    
+    <script>
+        // Node creation
+        const elementNode = document.createElement('span'); // Create a <span> element
+        const textNode = document.createTextNode('Inserted Span'); // Create a text node with content
+        elementNode.appendChild(textNode); // Append the text node to the span element
+    
+        // Node insertion using appendChild()
+        const pp = document.getElementById('pp'); // Get the paragraph element
+        pp.appendChild(elementNode); // Append the newly created span as a child of the paragraph
+    
+        // Node insertion using insertBefore()
+        const newpp = document.createElement('p'); // Create a new paragraph element
+        const newText = document.createTextNode('New Paragraph'); // Create a text node for the new paragraph
+        newpp.appendChild(newText); // Append the text node to the new paragraph
+        const contDiv = document.getElementById('d'); // Get the container div
+        contDiv.insertBefore(newpp, pp); // Insert the new paragraph before the original paragraph
+    
+        // Node replacement using replaceChild()
+        const replacedText = document.createTextNode('Replaced Paragraph'); // Create a text node for replacement
+        contDiv.replaceChild(replacedText, pp); // Replace the original paragraph with the new text node
+    
+        // Node Removal using removeChild()
+        const f_child = contDiv.firstChild; // Get the first child of the container div
+        contDiv.removeChild(newpp); // Remove the new paragraph
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!--  Write a JS program to demonstrate the use of forms object (document.forms)  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Q15a name:sudarshan sharma roll:49</h2>
+    <form id="f">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        // Accessing the form using document.forms
+        const f = document.forms["f"];
+
+        // Adding an event listener for form submission
+        f.addEventListener("submit", function(event) {
+            event.preventDefault(); // Preventing the default form submission
+
+            // Accessing form elements using the form object
+            const username = f["username"].value;
+            const password = f["password"].value;
+
+            // Displaying form data
+            document.write("Username:", username);
+            document.write("Password:", password);
+
+            // You can perform further actions here, such as form validation or AJAX requests
+        });
+    </script>
+</body>
+</html>

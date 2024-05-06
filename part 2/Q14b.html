@@ -1,0 +1,75 @@
+<!-- b) Create and test for following Regex patterns in JS
+i. The first character of a string must be uppercase.
+ii. A given value must contain a question marks, a dash and an underscore. 
+iii. The value must start from A or a and must end with full stop (.) or 
+exclamation (!).
+iv. The value must contain only one blank space.
+v. The string must not contain any digits.
+vi. The string must conation at least a symbol from the group of symbol ( , , @, $, 
+_, %, !, &, *, ^, ~, -, +, (, ), {,}, [, ], . , : )
+vii. The value must not contain any special character and digits.
+viii. The value must contain @ symbol between two words each of at least one 
+character.
+ix. The string must not start with digit.
+x. The string must start with underscore character or alphabets.
+xi. The value must start with 'BCA-TU-' and after these character there must be 
+only digits.
+xii. The value must be in email address format. 
+xiii. The value must contain at least a vowel letter. 
+xiv. The value contain ten digits and first digit cannot be 0. 
+xv. The value should be email address and its must end with 'edu.np'
+xvi. The value should be email address and it must contain 'gmail' or 'yahoo' after 
+@ symbol. 
+xvii. The regex must match if the string contains 'nepal' case insensitively -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('Q14b name:sudarshan sharma roll:49');
+        
+        const regex1 = /^[A-Z]/;
+        const regex2 = /[?_-]/;
+        const regex3 = /^[Aa].*[.!]$/;
+        const regex4 = /^(\S* ){0,1}\S*$/;
+        const regex5 = /^\D*$/;
+        const regex6 = /[ ,@$%!&*^~+(){}[\]:.]/; 
+        const regex7 = /^[^\W\d]*$/;
+        const regex8 = /^[^\s@]+@[^\s@]+$/;
+        const regex9 = /^[^\d]/;
+        const regex10 = /^[a-zA-Z_]/;
+        const regex11 = /^BCA-TU-\d+$/;
+        const regex12 = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const regex13 = /[aeiou]/i;
+        const regex14 = /^[1-9]\d{9}$/;
+        const regex15 = /^[^\s@]+@[^\s@]+\.edu\.np$/;
+        const regex16 = /^[^\s@]+@(?:gmail|yahoo)\.[^\s@]+$/;
+        const regex17 = /nepal/i;
+
+        const str = "Hello, this is a test string with symbols like ?, -, and _!";
+        
+        console.log(`i. ${regex1.test(str)}`);
+        console.log(`ii. ${regex2.test(str)}`);
+        console.log(`iii. ${regex3.test(str)}`);
+        console.log(`iv. ${regex4.test(str)}`);
+        console.log(`v. ${regex5.test(str)}`);
+        console.log(`vi. ${regex6.test(str)}`);
+        console.log(`vii. ${regex7.test(str)}`);
+        console.log(`viii. ${regex8.test(str)}`);
+        console.log(`ix. ${regex9.test(str)}`);
+        console.log(`x. ${regex10.test(str)}`);
+        console.log(`xi. ${regex11.test(str)}`);
+        console.log(`xii. ${regex12.test(str)}`);
+        console.log(`xiii. ${regex13.test(str)}`);
+        console.log(`xiv. ${regex14.test(str)}`);
+        console.log(`xv. ${regex15.test(str)}`);
+        console.log(`xvi. ${regex16.test(str)}`);
+        console.log(`xvii. ${regex17.test(str)}`);
+    </script>
+</body>
+</html>

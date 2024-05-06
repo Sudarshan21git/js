@@ -1,0 +1,51 @@
+<!-- 12. Create a webpage with following functionality.
+ There should be three radio buttons labeled with three colors. When one is 
+selected the background of the page must be changed to respective color.
+ There should be an image, when mouse cursor is placed over the image, 
+description of the image should be displayed on a paragraph below that image and 
+when muse cursor is removed from the image, the description should be vanished.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #desc{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p>Q12, Name:Sudarshan sharma, Roll:49</p>
+    <div>
+    <label><input type="radio" name="color" value="red">RED</label>
+    <label><input type="radio" name="color" value="blue">BLUE</label>
+    <label><input type="radio" name="color" value="green">GREEN</label>
+    </div>
+    
+    <img src="image.jpg" alt="image" id="image" height="100px">
+    <p id="desc">This is image description.</p>
+    <script>
+        const colors = document.querySelectorAll('input[name = "color"]');
+        const img = document.getElementById("image");
+        const desc = document.getElementById("desc");
+
+        colors.forEach(i => {
+            i.addEventListener('change', function(){
+                document.body.style.backgroundColor = this.value;
+            });
+        });
+
+        img.addEventListener('mouseover', function(){
+            desc. style.display = 'block';
+
+        });
+
+        img.addEventListener('mouseout', function(){
+            desc.style.display='none';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .book-record {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Q13e name;sudarshan sharma roll:49</h3>
+    <div id="main">
+        <div id="rec">
+            <label for="bookId">Book Id:</label>
+            <input type="text" id="bookId" value="100" readonly>
+            <label for="Title">Title:</label>
+            <input type="text">
+            <label for="Author">Author(s):</label>
+            <input type="text">
+            <label for="Price">Price:</label>
+            <input type="text">
+            <button id="add">+</button><br>
+        </div>
+    </div>
+
+    <button id="saveBtn">Save</button>
+
+    <script>
+        const main = document.getElementById("main");
+        const add = document.getElementById("add");
+        let nextBookId = 101; // Initial Book Id value for clones (incremented from 100)
+
+        add.addEventListener("click", function(){
+            const rec = document.getElementById("rec");
+            const clone = rec.cloneNode(true); // Clone the record div
+            clone.querySelector("#bookId").value = nextBookId++; // Set Book Id value for the clone
+            main.appendChild(clone); // Append the clone to the main div
+        });
+    </script>
+</body>
+</html>

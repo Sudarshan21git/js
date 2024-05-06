@@ -1,0 +1,39 @@
+<!-- 13. Working with HTML DOM
+a) Create a HTML page and write a JS program to demonstrate the use of following 
+properties of any node objects in DOM.
+nodeName nodeType lastChild 
+nodeValue parentNode nextSibling 
+ previosSibling childNodes firstChild -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <div id="con">
+        <ul id="list">
+            <li>list 1</li>
+            <li>list 2</li>
+        </ul>
+        <p id="paragraph">Q13a, Name:Sudarshan sharma, Roll:49</p>
+    </div>
+    <script>
+        const c = document.getElementById('con');
+        const li = document.getElementById('list');
+        const p = document.getElementById('paragraph');
+
+        console.log('nodeName: ', con.nodeName);
+        console.log('nodeType: ', con.nodeType);
+        console.log('lastChild: ', con.lastChild);
+        console.log('nodeValue: ', con.nodeValue);
+        console. log('parentNode: ', li.parentNode);
+        console.log('nextSibling: ', li.nextSibling);
+        console.log('previousSibling: ',li.previousSibling);
+        console.log('childNodes: ', con.childNodes);
+        console.log('firstChild: ',con.firstChild);
+    </script>
+ </body>
+ </html>

@@ -1,0 +1,261 @@
+<!-- Create a registration form and validate using separate JS file (should be from scratch.
+API /Library is not allowed). The form must include following entries and validation
+rules:
+ First Name (required , must contain alphabets only the length should be 1 to 50)
+ Last Name (optional, must contain alphabets only the length should be 1 to 50)
+ Date of birth (required, use date type)\\
+ Gender (required, must be selected from combo box)
+ Provenience (required, must be selected from combo box, 7 Provenience of
+Nepal)
+ District (required, must be selected from combo box, 77 districts of Nepal)
+ Cell Phone (required, 10 digits only not other symbols and alphabets)
+ Email address (optional, if entered must be in email address format)
+ User Name (required, must start with alphabet, can contain digits and only two
+special character (@ and _) are allowed, length must be in between 6 to 15
+characters)
+ Password (required, must contain at least a digit, a special character, an uppercase
+letter and a lowercase letter, length must be in between 8 to 20 characters)
+ Confirm password (required, must match the value entered in password field)
+ Register ( a submit button)
+Show the error message with guideline next to the element in red color if the value is not
+satisfying the rule -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h3>Q15b sudarshan sharma roll:49</h3>
+    <h2>Registration Form</h2>
+    <form id="f" onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td><label for="fname">First Name:</label></td>
+                <td><input type="text" id="fname" required></td>
+                <td><span class="error" id="fnameError"></span></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Last Name:</label></td>
+                <td><input type="text" id="lname"></td>
+                <td><span class="error" id="lnameError"></span></td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td><input type="date" id="dob" required></td>
+                <td><span class="error" id="dobError"></span></td>
+            </tr>
+            <tr>
+                <td><label for="gender">Gender:</label></td>
+                <td>
+                    <select id="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </td>
+                <td><span class="error" id="genderError"></span></td>
+            </tr>
+            <tr>
+                <td><label for="province">Province:</label></td>
+                <td>
+                    <select id="province" required>
+                        <option value="">Select Province</option>
+                        <option value="one">Province 1</option>
+                        <option value="two">Province 2</option>
+                        <option value="three">Province 3</option>
+                        <option value="four">Province 4</option>
+                        <option value="five">Province 5</option>
+                        <option value="six">Province 6</option>
+                        <option value="seven">Province 7</option>
+                    </select>
+                </td>
+                <td><span class="error" id="provinceError"></span></td>
+            </tr>
+            <tr>
+                <td><label for="district">District:</label></td>
+                <td>
+                    <select id="district">
+                        <option>Achham</option>
+                        <option value="Achham">Achham</option>
+                <option value="Arghakhanchi">Arghakhanchi</option>
+                <option value="Baglung">Baglung</option>
+                <option value="Baitadi">Baitadi</option>
+                <option value="Bajhang">Bajhang</option>
+                <option value="Bajura">Bajura</option>
+                <option value="Banke">Banke</option>
+                <option value="Bara">Bara</option>
+                <option value="Bardiya">Bardiya</option>
+                <option value="Bhaktapur">Bhaktapur</option>
+                <option value="Bhojpur">Bhojpur</option>
+                <option value="Chitwan">Chitwan</option>
+                <option value="Dadeldhura">Dadeldhura</option>
+                <option value="Dailekh">Dailekh</option>
+                <option value="Dang">Dang</option>
+                <option value="Darchula">Darchula</option>
+                <option value="Dhading">Dhading</option>
+                <option value="Dhankuta">Dhankuta</option>
+                <option value="Dhanusa">Dhanusa</option>
+                <option value="Dholkha">Dholkha</option>
+                <option value="Dolpa">Dolpa</option>
+                <option value="Doti">Doti</option>
+                <option value="Gorkha">Gorkha</option>
+                <option value="Gulmi">Gulmi</option>
+                <option value="Humla">Humla</option>
+                <option value="Ilam">Ilam</option>
+                <option value="Jajarkot">Jajarkot</option>
+                <option value="Jhapa">Jhapa</option>
+                <option value="Jumla">Jumla</option>
+                <option value="Kailali">Kailali</option>
+                <option value="Kalikot">Kalikot</option>
+                <option value="Kanchanpur">Kanchanpur</option>0
+                <option value="Kapilvastu">Kapilvastu</option>
+                <option value="Kaski">Kaski</option>
+                <option value="Kathmandu">Kathmandu</option>
+                <option value="Kavrepalanchok">Kavrepalanchok</option>
+                <option value="Khotang">Khotang</option>
+                <option value="Lalitpur">Lalitpur</option>
+                <option value="Lamjung">Lamjung</option>
+                <option value="Mahottari">Mahottari</option>
+                <option value="Makwanpur">Makwanpur</option>
+                <option value="Manang">Manang</option>
+                <option value="Morang">Morang</option>
+                <option value="Mugu">Mugu</option>
+                <option value="Mustang">Mustang</option>
+                <option value="Myagdi">Myagdi</option>
+                <option value="Nawalparasi">Nawalparasi</option>
+                <option value="Nuwakot">Nuwakot</option>
+                <option value="Okhaldhunga">Okhaldhunga</option>
+                <option value="Palpa">Palpa</option>
+                <option value="Panchthar">Panchthar</option>
+                <option value="Parbat">Parbat</option>
+                <option value="Parsa">Parsa</option>
+                <option value="Pyuthan">Pyuthan</option>
+                <option value="Ramechhap">Ramechhap</option>
+                <option value="Rasuwa">Rasuwa</option>
+                <option value="Rautahat">Rautahat</option>
+                <option value="Rolpa">Rolpa</option>
+                <option value="Rukum">Rukum</option>
+                <option value="Rupandehi">Rupandehi</option>
+                <option value="Salyan">Salyan</option>
+                <option value="Sankhuwasabha">Sankhuwasabha</option>
+                <option value="Saptari">Saptari</option>
+                <option value="Sarlahi">Sarlahi</option>
+                <option value="Sindhuli">Sindhuli</option>
+                <option value="Sindhupalchok">Sindhupalchok</option>
+                <option value="Siraha">Siraha</option>
+                <option value="Solukhumbu">Solukhumbu</option>
+                <option value="Sunsari">Sunsari</option>
+                <option value="Surkhet">Surkhet</option>
+                <option value="Syangja">Syangja</option>
+                <option value="Tanahu">Tanahu</option>
+                <option value="Taplejung">Taplejung</option>
+                <option value="Terhathum">Terhathum</option>
+                <option value="Udayapur">Udayapur</option>
+                    </select>
+                </td>
+                <td><span class="error" id="districtError"></span></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone no:</label></td>
+                <td><input type="text" id="phone" required></td>
+                <td><span class="error" id="phoneError"></span></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email"></td>
+                <td><span class="error" id="emailError"></span></td>
+            </tr>
+            <tr>
+                <td><label for="uname">User Name:</label></td>
+                <td><input type="text" id="uname" required></td>
+                <td><span class="error" id="unameError"></span></td>
+            </tr>
+            <tr>
+                <td><label for="pw">Password:</label></td>
+                <td><input type="password" id="pw" required></td>
+                <td><span class="error" id="pwError"></span></td>
+            </tr>
+            <tr>
+                <td><label for="cpw">Confirm Password:</label></td>
+                <td><input type="password" id="cpw" required></td>
+                <td><span class="error" id="cpwError"></span></td>
+            </tr>
+        </table>
+        <button type="submit">Register</button>
+    </form>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+    <script >function validateForm() {
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var dob = document.getElementById("dob").value;
+        var gender = document.getElementById("gender").value;
+        var province = document.getElementById("province").value;
+        var district = document.getElementById("district").value;
+        var phone = document.getElementById("phone").value;
+        var email = document.getElementById("email").value;
+        var uname = document.getElementById("uname").value;
+        var pw = document.getElementById("pw").value;
+        var cpw = document.getElementById("cpw").value;
+        
+        var isValid = true;
+    
+        // First Name validation
+        if (!/^[a-zA-Z ]{1,50}$/.test(fname)) {
+            document.getElementById("fnameError").innerText = "First Name must contain alphabets only and length should be 1 to 50.";
+            isValid = false;
+        } else {
+            document.getElementById("fnameError").innerText = "";
+        }
+    
+        // Last Name validation
+        if (lname && !/^[a-zA-Z ]{1,50}$/.test(lname)) {
+            document.getElementById("lnameError").innerText = "Last Name must contain alphabets only and length should be 1 to 50.";
+            isValid = false;
+        } else {
+            document.getElementById("lnameError").innerText = "";
+        }
+    
+        // Phone validation
+        if (!/^\d{10}$/.test(phone)) {
+            document.getElementById("phoneError").innerText = "Phone number must contain 10 digits only.";
+            isValid = false;
+        } else {
+            document.getElementById("phoneError").innerText = "";
+        }
+    
+        // Username validation
+        if (!/^[a-zA-Z][a-zA-Z0-9_@]{5,14}$/.test(uname)) {
+            document.getElementById("unameError").innerText = "Username must start with alphabet, can contain digits and only two special characters (@ and _) are allowed, length must be in between 6 to 15 characters.";
+            isValid = false;
+        } else {
+            document.getElementById("unameError").innerText = "";
+        }
+    
+        // Password validation
+        if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@_])(?=.*[^\w\d_]).{8,20}/.test(pw)) {
+            document.getElementById("pwError").innerText = "Password must contain at least a digit, a special character, an uppercase letter and a lowercase letter, length must be in between 8 to 20 characters.";
+            isValid = false;
+        } else {
+            document.getElementById("pwError").innerText = "";
+        }
+    
+        // Confirm Password validation
+        if (pw !== cpw) {
+            document.getElementById("cpwError").innerText = "Passwords do not match.";
+            isValid = false;
+        } else {
+            document.getElementById("cpwError").innerText = "";
+        }
+    
+        return isValid;
+    }</script>
+</body>
+</html>

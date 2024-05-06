@@ -1,0 +1,29 @@
+<!-- d) Demonstrate the use of following methods in DOM to work with attributes of HTML 
+document
+getAttribute() setAttribute()
+hasAttribute() removeAttribute() -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p> Q13d name:sudarshan sharma roll:49</p>
+    <img src="image.jpg" alt="image" height="30px" id="image">
+    <input type="text" disabled="disabled" id="myField">
+
+    <script>
+        let i = document.getElementById('image');
+        let fld = document.getElementById('myField');
+
+        var h = i.getAttribute('height');
+        document.write('<br> height of image:'+h);
+
+        i.setAttribute('class','smallImg');
+        fld.removeAttribute('disabled');
+        fld.hasAttribute('disabled');
+    </script>
+</body>
+</html>

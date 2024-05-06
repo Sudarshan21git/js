@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Different ways of cookie creation
+        document.cookie = "username=sudarshan";
+        document.cookie = "favoriteColor=black; path=/";
+
+        // Reading cookie
+        console.log("Reading all cookies:", document.cookie);
+
+        // Changing cookie
+        document.cookie = "username=sharma";
+        document.cookie = "favoriteColor=white; path=/";
+        console.log("Changing cookie:", document.cookie);
+
+        // Deleting cookie
+        document.cookie = "favoriteColor=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+        console.log("Cookies after deletion of favouriteColor cookie:", document.cookie);
+    </script>
+</body>
+</html>

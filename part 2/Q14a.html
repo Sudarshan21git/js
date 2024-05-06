@@ -1,0 +1,56 @@
+<!-- 14. Understanding Regular Expression in JS
+a) Write a JS program to demonstrate the use of following concepts 
+ two ways of creating regular expression pattern in JS
+ using exec() , test(), match(), matchAll(), search(), replace(), replaceAll()
+and split() functions. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log('Q14 name:sudarshan sharma roll:49');
+        // Two ways of creating regular expression pattern in JS
+// Method 1: Using RegExp constructor
+const regex1 = new RegExp('pattern');
+
+// Method 2: Using literal notation
+const regex2 = /pattern/g;
+
+
+
+// Sample text for demonstration
+const text = 'This is a pattern text.';
+
+// Using exec()
+console.log('exec():', regex1.exec(text));
+
+// Using test()
+console.log('test():', regex2.test(text));
+
+// Using match()
+console.log('match():', text.match(regex1));
+
+// Using matchAll()
+console.log('matchAll():', text.matchAll(regex2));
+
+
+// Using search()
+console.log('search():', text.search(regex1));
+
+// Using replace()
+console.log('replace():', text.replace(regex2, 'replace'));
+
+// Using replaceAll() - Available from ES2021
+console.log('replaceAll():', text.replaceAll(regex2, 'replaceAll'));
+
+// Using split()
+console.log('split():', text.split(regex2));
+
+    </script>
+</body>
+</html>

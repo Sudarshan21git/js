@@ -1,0 +1,32 @@
+<!-- f) Create a JS array containing some districts of your provenience. Now display those 
+districts in unordered list dynamically on web page using DOM manipulation.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Districts of Province</title>
+</head>
+<body>
+    <p> Q13f Name:sudarshan sharma roll:49</p>
+    <ul id="district">
+        <!-- The districts will be displayed dynamically here -->
+    </ul>
+
+    <script>
+        // Array containing some districts of a province
+        const districts = ['Pokhara', 'Kathmandu', 'Lalitpur'];
+
+        // Get the ul element where we'll display the districts
+        const d = document.getElementById('district');
+
+        // Loop through the districts array and create li elements for each district
+        districts.forEach(district => {
+            const item = document.createElement('li');
+            item.textContent = district;
+            d.appendChild(item);
+        });
+    </script>
+</body>
+</html>
